@@ -9,20 +9,13 @@ import SwiftUI
 
 struct Header: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack(alignment: .center) {
+        VStack(alignment: .center) {
                 Image("SmallThings")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    //.padding(-25)
-                
-                Text("Philadelphia Resource Guide")
-                    .multilineTextAlignment(.leading)
-                    .font(.title3)
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .foregroundStyle(.cyan)
-            }
+                    .frame(height: 200)
         }
+        .padding(.vertical, -25)
     }
 }
 

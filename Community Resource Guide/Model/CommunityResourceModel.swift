@@ -25,14 +25,18 @@ struct Record: Decodable, Identifiable {
 
 // MARK: - Fields
 struct Fields: Decodable {
-    var label: String
+    var label: String?
     var url: String?
     var descriptionNotes: String?
     var tags: [String]?
     var type: FieldsType?
-    var phoneContact, hoursOfOperation, emergencyAssistanceNumber: String?
     var imageURL: String?
-    var phoneContact2, location, email: String?
+    var phoneContact: String?
+    var hoursOfOperation: String?
+    var emergencyAssistanceNumber: String?
+    var logo: [Logo]?
+    var phoneContact2, street1, street2, email: String?
+    var city, state, zip: String?
 
     enum CodingKeys: String, CodingKey {
         case label = "Label"
@@ -40,14 +44,48 @@ struct Fields: Decodable {
         case descriptionNotes = "Description / Notes"
         case tags = "Tags"
         case type = "Type"
+        case imageURL = "ImageURL"
         case phoneContact = "Phone Contact"
         case hoursOfOperation = "Hours of Operation"
         case emergencyAssistanceNumber = "Emergency Assistance Number"
-        case imageURL = "ImageURL"
+        case logo = "Logo"
         case phoneContact2 = "Phone Contact 2"
-        case location = "Location"
+        case street1 = "Street 1"
+        case street2 = "Street 2"
         case email = "Email"
+        case city = "City"
+        case state = "State"
+        case zip = "Zip"
     }
+}
+
+// MARK: - Logo
+struct Logo: Decodable {
+    var id: String?
+    var width, height: Int?
+    var url: String?
+    var filename: String?
+    var size: Int?
+    var type: TypeEnum?
+    var thumbnails: Thumbnails?
+}
+
+// MARK: - Thumbnails
+struct Thumbnails: Decodable {
+    var small, large, full: Full?
+}
+
+// MARK: - Full
+struct Full: Decodable {
+    var url: String?
+    var width, height: Int?
+}
+
+enum TypeEnum: String, Decodable {
+    case imageGIF = "image/gif"
+    case imageJPEG = "image/jpeg"
+    case imagePNG = "image/png"
+    case imageSVGXML = "image/svg+xml"
 }
 
 enum FieldsType: String, Decodable {

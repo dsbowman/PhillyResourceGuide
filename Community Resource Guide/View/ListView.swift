@@ -12,12 +12,11 @@ struct ListView: View {
     @State private var searchText = ""
     
     var body: some View {
-        VStack(alignment: .center) {
         
             NavigationView {
                 List {ForEach(networkManager.apiData, id: \.id) { apiData in
-                    NavigationLink(destination: DetailView()) {
-                        TileView(label: apiData.fields.label , imageUrl: apiData.fields.imageURL ?? "", description: apiData.fields.descriptionNotes ?? "")
+                    NavigationLink(destination: DetailView(apiData: apiData.fields)) {
+                        TileView(label: apiData.fields.label! , imageUrl: apiData.fields.imageURL ?? "", description: apiData.fields.descriptionNotes ?? "")
                     }
                 }
                     
@@ -25,27 +24,25 @@ struct ListView: View {
                 }
                 .listStyle(.inset)
                 .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        ToolbarItem(placement: .principal) {
-                            Text("Philadelphia Resource Guide")
-                                .font(.headline)
+                .toolbar {
+                    ToolbarItem(placement: .principal) {
+                        Text("Philadelphia Resource Guide")
+                            .font(.headline)
                         
-                            
-                        }
                         
                     }
-                    .refreshable {
-                        self.networkManager.getData()
-                    }
-                           }
-                    .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-                           
-                    .onAppear(perform: self.networkManager.getData)
-                           }
-                           }
-                           }
-                           
-                           
-                           #Preview {
-                    ListView()
+                    
                 }
+                .refreshable {
+                    self.networkManager.getData()
+                }
+            }
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+            
+            .onAppear(perform: self.networkManager.getData)
+        }
+    }
+
+#Preview {
+    ListView()
+}

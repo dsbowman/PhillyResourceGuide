@@ -7,21 +7,60 @@
 
 import SwiftUI
 
-struct PhoneContact: View {
+class ContactControl {
     
-    var icon: String
-    var data: String
-    
-    var body: some View {
-        HStack{
-            Image(systemName: icon)
-            Link(destination: URL(string: "tel:\(data)")!, label: {
-                Text(data)
-            })
+    struct phone: View {
+        var icon = "phone.fill"
+        var data: String
+        
+        var body: some View {
+            
+            
+            VStack(alignment: .leading) {
+                Text("phone")
+                    .font(.caption)
+                Link(destination: URL(string: "tel:\(data)")!, label: {
+                    Text(data)
+                })
+            }
         }
     }
+    
+    struct email: View {
+        var icon = "envelope.fill"
+        var data: String
+        
+        var body: some View {
+            
+            
+            VStack(alignment: .leading) {
+                Text("email")
+                    .font(.caption)
+                Link(destination: URL(string: "mailto:\(data)")!, label: {
+                    Text(data)
+                })
+            }
+        }
+    }
+    
+    struct website: View {
+        var icon = "globe"
+        var url: String
+
+        var body: some View {
+            VStack(alignment: .leading) {
+                Text("website")
+                    .font(.caption)
+                Link(destination: URL(string: url)!, label: {
+                    Text(url)
+                })
+            }
+            
+        }
+    }
+    
 }
 
 #Preview {
-    ContactControl(icon:"phone.fill", data:"812-552-9102")
+    ContactControl.website(url: "dekebowman.smugmug.com") as any View
 }
