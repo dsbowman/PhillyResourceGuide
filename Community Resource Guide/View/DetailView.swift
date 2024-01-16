@@ -18,37 +18,45 @@ struct DetailView: View {
         List {
             if let description = apiData.descriptionNotes {
                 Section {
-                    Text(description)
-                    
-                } header: {
-                    Text("Description")
+                    VStack(alignment: .leading) {
+                        Text("Description")
+                            .font(.caption)
+                        Text(description)
+                        
+                    }
                 }
             }
             if let hoursOfOperation = apiData.hoursOfOperation {
                 Section {
-                    Text(hoursOfOperation)
-                } header: {
-                    Text("Hours of Operation")
+                    VStack(alignment: .leading) {
+                        Text("Hours of Operation")
+                            .font(.caption)
+                        Text(hoursOfOperation)
+                    }
                 }
             }
 //            if let phoneContact = apiData.phoneContact, let phoneContact2 = apiData.phoneContact2, let email = apiData.email, let url = apiData.url {
                 Section {
-                    ContactControl.phone(data: apiData.phoneContact ?? "")
-                    ContactControl.phone(data: apiData.phoneContact2 ?? "")
-                    ContactControl.email(data: apiData.email ?? "")
-                    ContactControl.website(url: apiData.url ?? "")
-                } header: {
-                    Text("Contact")
+                    if let phoneContact = apiData.phoneContact {
+                        ContactControl.phone(data: phoneContact) }
+                    if let phoneContact2 = apiData.phoneContact2 {
+                        ContactControl.phone(data: phoneContact2) }
+                    if let email = apiData.email {
+                        ContactControl.email(data: email) }
+                    if let url = apiData.url {
+                        ContactControl.website(url: url) }
                 }
                 if let street1 = apiData.street1, let city = apiData.city, let state = apiData.state, let zip = apiData.zip {
                     Section {
                         Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
                             HStack(alignment: .top) {
                                 VStack(alignment: .leading) {
+                                    Text("Location")
+                                        .font(.caption)
                                     Text(street1)
-                                        .padding(.bottom, -5)
-                                    Text(apiData.street2 ?? "")
-                                        .padding(.bottom, -5)
+                                    if let street2 = apiData.street2 {
+                                        Text(street2)
+                                    }
                                     Text("\(city), \(state) \(zip)")
                                 }
 //                                Spacer()
@@ -58,8 +66,6 @@ struct DetailView: View {
 //                                    .frame(width: 100, height: 100)
                             }
                         })
-                    } header: {
-                        Text("Location")
                     }
                 }
             }

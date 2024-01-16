@@ -9,12 +9,17 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
+    
+    var label: String
+    
+    var location: CLLocationCoordinate2D
 
     var body: some View {
         Map()
+
     }
 }
 
-#Preview {
-    MapView()
-}
+//#Preview {
+//    MapView()
+//}
