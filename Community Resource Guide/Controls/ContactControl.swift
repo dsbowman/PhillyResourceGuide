@@ -12,15 +12,18 @@ class ContactControl {
     struct phone: View {
         var icon = "phone.fill"
         var data: String
+        var label: String?
+        var fontColor: Color?
         
         var body: some View {
             
             
             VStack(alignment: .leading) {
-                Text("phone")
+                Text(label ?? "phone")
                     .font(.caption)
                 Link(destination: URL(string: "tel:\(data)")!, label: {
                     Text(data)
+                        .textSelection(.enabled)
                 })
             }
         }
@@ -29,15 +32,18 @@ class ContactControl {
     struct email: View {
         var icon = "envelope.fill"
         var data: String
+        var label: String?
+        var fontColor: Color?
         
         var body: some View {
             
             
             VStack(alignment: .leading) {
-                Text("email")
+                Text(label ?? "email")
                     .font(.caption)
                 Link(destination: URL(string: "mailto:\(data)")!, label: {
                     Text(data)
+                        .textSelection(.enabled)
                 })
             }
         }
@@ -46,18 +52,23 @@ class ContactControl {
     struct website: View {
         var icon = "globe"
         var url: String
+        var label: String?
+        var fontColor: Color?
 
         var body: some View {
             VStack(alignment: .leading) {
                 Text("website")
                     .font(.caption)
+
                 Link(destination: URL(string: url)!, label: {
                     Text(url)
+                        .textSelection(.enabled)
                 })
             }
-            
         }
+        
     }
+        
     
 }
 

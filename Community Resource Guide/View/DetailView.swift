@@ -22,6 +22,8 @@ struct DetailView: View {
                         Text("Description")
                             .font(.caption)
                         Text(description)
+                            .textSelection(.enabled)
+                        
                         
                     }
                 }
@@ -32,11 +34,21 @@ struct DetailView: View {
                         Text("Hours of Operation")
                             .font(.caption)
                         Text(hoursOfOperation)
+                            .textSelection(.enabled)
                     }
                 }
             }
-//            if let phoneContact = apiData.phoneContact, let phoneContact2 = apiData.phoneContact2, let email = apiData.email, let url = apiData.url {
-                Section {
+            //            if let phoneContact = apiData.phoneContact, let phoneContact2 = apiData.phoneContact2, let email = apiData.email, let url = apiData.url {
+            Section {
+                if let emergencyAssistanceNumber = apiData.emergencyAssistanceNumber {
+                    VStack(alignment: .leading) {
+                        Text("Emergency")
+                            .font(.caption)
+                            .foregroundStyle(.red)
+                        Link(destination: URL(string: "tel:\(emergencyAssistanceNumber)")!, label: {
+                            Text(emergencyAssistanceNumber)
+                                .textSelection(.enabled)
+                        })}.textSelection(.enabled)
                     if let phoneContact = apiData.phoneContact {
                         ContactControl.phone(data: phoneContact) }
                     if let phoneContact2 = apiData.phoneContact2 {
@@ -46,37 +58,43 @@ struct DetailView: View {
                     if let url = apiData.url {
                         ContactControl.website(url: url) }
                 }
-                if let street1 = apiData.street1, let city = apiData.city, let state = apiData.state, let zip = apiData.zip {
-                    Section {
-                        Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
-                            HStack(alignment: .top) {
+            }
+            if let street1 = apiData.street1, let city = apiData.city, let state = apiData.state, let zip = apiData.zip {
+                Section {
+                    
+                    HStack(alignment: .top) {
+                        VStack(alignment: .leading) {
+                            Text("Location")
+                                .font(.caption)
+                            Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
                                 VStack(alignment: .leading) {
-                                    Text("Location")
-                                        .font(.caption)
                                     Text(street1)
                                     if let street2 = apiData.street2 {
-                                        Text(street2)
+                                    Text(street2)
                                     }
                                     Text("\(city), \(state) \(zip)")
                                 }
-//                                Spacer()
-//                                Map {
-//                                    Annotation(apiData.label, location: location )
-//                                }
-//                                    .frame(width: 100, height: 100)
-                            }
-                        })
+                            })
+                        }
+                        .textSelection(.enabled)
+                        //                                Spacer()
+                        //                                Map {
+                        //                                    Annotation(apiData.label, location: location )
+                        //                                }
+                        //                                    .frame(width: 100, height: 100)
                     }
+                    
+                }
             }
         }
     }
+    
+}
 
 
-
-
-    //#Preview {
-    //    DetailView(apiData: <#Fields#>)
-    //}
+//#Preview {
+//    DetailView(apiData: <#Fields#>)
+//}
 
 //struct Detail_Previews: PreviewProvider {
 //    static var previews: some View {
@@ -96,11 +114,11 @@ struct DetailView: View {
 //            zip: "zip"
 //            // ... other property values
 //        )
-//        
+//
 //        return DetailView(apiData: sampleDetail)
 //    }
 //}
 
 
 
-    
+
