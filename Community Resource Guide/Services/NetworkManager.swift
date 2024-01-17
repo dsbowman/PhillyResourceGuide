@@ -11,6 +11,14 @@ import Foundation
 class NetworkManager: ObservableObject {
     
     @Published var apiData = [Record]()
+    @Published var searchText = ""
+    
+    var filteredResources: [Record] {
+        guard !searchText.isEmpty else { return apiData }
+        return apiData.filter { $0.fields.label?.localizedCaseInsensitiveContains(searchText) ?? false || $0.fields.descriptionNotes?.localizedCaseInsensitiveContains(searchText) ?? false || $0.fields.tags?.debugDescription.localizedCaseInsensitiveContains(searchText) ?? false}
+            
+        }
+
     
     func getData() {
         var request = URLRequest(url: URL(string: "https://api.airtable.com/v0/appG874fGad8U9K7y/CommunityResources")!,timeoutInterval: Double.infinity)

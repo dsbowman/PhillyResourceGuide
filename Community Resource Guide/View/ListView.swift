@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ListView: View {
-    @ObservedObject var networkManager = NetworkManager()
-    @State private var searchText = ""
+    
+    @StateObject var networkManager = NetworkManager()
+
     
     var body: some View {
         
         NavigationView {
-            List {ForEach(networkManager.apiData.sorted(by: {$0.fields.label ?? "" < $1.fields.label ?? ""}), id: \.id) { apiData in
+            List {ForEach(networkManager.filteredResources.sorted(by: {$0.fields.label ?? "" < $1.fields.label ?? ""}), id: \.id) { apiData in
                 NavigationLink(destination: DetailView(apiData: apiData.fields)) {
                     TileView(label: apiData.fields.label! , imageUrl: apiData.fields.imageURL ?? "", description: apiData.fields.descriptionNotes ?? "")
                 }
@@ -35,7 +36,7 @@ struct ListView: View {
                 self.networkManager.getData()
             }
         }
-        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+        .searchable(text: $networkManager.searchText, placement: .navigationBarDrawer(displayMode: .always))
         
         .onAppear(perform: self.networkManager.getData)
     }

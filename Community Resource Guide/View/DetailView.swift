@@ -67,7 +67,6 @@ struct DetailView: View {
                             }
                         })
                     }
-                }
             }
         }
     }
