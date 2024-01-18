@@ -10,9 +10,9 @@ import MapKit
 
 struct MapView: View {
     
-    var label: String
+    //var label: String
     
-    var location: CLLocationCoordinate2D
+    //var location: CLLocationCoordinate2D
 
     var body: some View {
         Map()

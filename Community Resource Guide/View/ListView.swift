@@ -9,11 +9,10 @@ import SwiftUI
 
 struct ListView: View {
     
-    @StateObject var networkManager = NetworkManager()
+    @ObservedObject var networkManager = NetworkManager()
 
     
     var body: some View {
-        
         NavigationView {
             List {ForEach(networkManager.filteredResources.sorted(by: {$0.fields.label ?? "" < $1.fields.label ?? ""}), id: \.id) { apiData in
                 NavigationLink(destination: DetailView(apiData: apiData.fields)) {
@@ -22,21 +21,19 @@ struct ListView: View {
             }
             }
             .listStyle(.inset)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .principal) {
-                    Text("Philadelphia Resource Guide")
-                        .font(.headline)
-                    
-                    
-                }
-                
-            }
+            .navigationTitle("Philly Resource Guide")
+//            .toolbar {
+//                ToolbarItem(placement: .principal) {
+//                    Text("Philly Resource Guide")
+//                        .font(.title2)
+//                        .fontWeight(.semibold)
+//                }
+//            }
+            .searchable(text: $networkManager.searchText, placement: .automatic)
             .refreshable {
                 self.networkManager.getData()
             }
         }
-        .searchable(text: $networkManager.searchText, placement: .navigationBarDrawer(displayMode: .always))
         
         .onAppear(perform: self.networkManager.getData)
     }

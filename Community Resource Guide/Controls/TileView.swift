@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct TileView: View {
     var label: String = "Organization Name"
     var imageUrl: String?
@@ -43,6 +41,7 @@ struct TileView: View {
                     HStack {
                         Spacer()
                         TextLabel(label: label)
+                            .padding()
                         Spacer()
                     }
                     
@@ -64,9 +63,9 @@ struct TextLabel: View {
     var label:String
     var body: some View {
         Text(label)
-            .font(.title3)
+            .font(.headline)
             .fontWeight(.semibold)
             .multilineTextAlignment(.center)
-            .padding(.bottom, 10)
+            .padding(.bottom, 5)
     }
 }
