@@ -42,9 +42,9 @@ class NetworkManager: ObservableObject {
                 
             } catch {
                 print("Error parsing JSON: \(error)")
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("JSON String: \(jsonString)")
-                }
+//                if let jsonString = String(data: data, encoding: .utf8) {
+//                    print("JSON String: \(jsonString)")
+//                }
             }
         }
         

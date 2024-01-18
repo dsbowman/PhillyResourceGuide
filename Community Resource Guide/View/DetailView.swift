@@ -13,7 +13,7 @@ struct DetailView: View {
     var apiData: Fields
     
     var body: some View {
-        TileView(label: apiData.label!, imageUrl: apiData.imageURL ?? "")
+        TileView(label: apiData.label!, imageUrl: apiData.logo?.first?.url ?? "")
         List {
             if let description = apiData.descriptionNotes {
                 Section {
