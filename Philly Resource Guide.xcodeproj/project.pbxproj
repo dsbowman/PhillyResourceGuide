@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E12BC5A82B4612C8000897E7 /* Community_Resource_GuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5A72B4612C8000897E7 /* Community_Resource_GuideApp.swift */; };
+		E12BC5A82B4612C8000897E7 /* Philly_Resource_GuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */; };
 		E12BC5AA2B4612C8000897E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5A92B4612C8000897E7 /* ContentView.swift */; };
 		E12BC5AC2B4612CA000897E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BC5AB2B4612CA000897E7 /* Assets.xcassets */; };
 		E12BC5B02B4612CA000897E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BC5AF2B4612CA000897E7 /* Preview Assets.xcassets */; };
 		E12BC5BA2B4612CA000897E7 /* Community_Resource_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5B92B4612CA000897E7 /* Community_Resource_GuideTests.swift */; };
-		E12BC5C42B4612CA000897E7 /* Community_Resource_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C32B4612CA000897E7 /* Community_Resource_GuideUITests.swift */; };
-		E12BC5C62B4612CA000897E7 /* Community_Resource_GuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C52B4612CA000897E7 /* Community_Resource_GuideUITestsLaunchTests.swift */; };
+		E12BC5C42B4612CA000897E7 /* Philly_Resource_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C32B4612CA000897E7 /* Philly_Resource_GuideUITests.swift */; };
+		E12BC5C62B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */; };
 		E12BC5D32B4613BB000897E7 /* CategoryListTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */; };
 		E12BC5DC2B4741D6000897E7 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5DB2B4741D6000897E7 /* TileView.swift */; };
 		E16057302B51A2EA00B68BA5 /* ContactControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160572F2B51A2EA00B68BA5 /* ContactControl.swift */; };
@@ -45,16 +45,16 @@
 
 /* Begin PBXFileReference section */
 		E12BC5A42B4612C8000897E7 /* Community Resource Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Resource Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E12BC5A72B4612C8000897E7 /* Community_Resource_GuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_Resource_GuideApp.swift; sourceTree = "<group>"; };
+		E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideApp.swift; sourceTree = "<group>"; };
 		E12BC5A92B4612C8000897E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E12BC5AB2B4612CA000897E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E12BC5AD2B4612CA000897E7 /* Community_Resource_Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Community_Resource_Guide.entitlements; sourceTree = "<group>"; };
+		E12BC5AD2B4612CA000897E7 /* Philly_Resource_Guide.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Philly_Resource_Guide.entitlements; sourceTree = "<group>"; };
 		E12BC5AF2B4612CA000897E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E12BC5B52B4612CA000897E7 /* Community Resource GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Community Resource GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12BC5B92B4612CA000897E7 /* Community_Resource_GuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_Resource_GuideTests.swift; sourceTree = "<group>"; };
 		E12BC5BF2B4612CA000897E7 /* Community Resource GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Community Resource GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E12BC5C32B4612CA000897E7 /* Community_Resource_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_Resource_GuideUITests.swift; sourceTree = "<group>"; };
-		E12BC5C52B4612CA000897E7 /* Community_Resource_GuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community_Resource_GuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E12BC5C32B4612CA000897E7 /* Philly_Resource_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideUITests.swift; sourceTree = "<group>"; };
+		E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTile.swift; sourceTree = "<group>"; };
 		E12BC5DB2B4741D6000897E7 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		E160572E2B50983E00B68BA5 /* Community-Resource-Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Community-Resource-Guide-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -96,9 +96,9 @@
 		E12BC59B2B4612C8000897E7 = {
 			isa = PBXGroup;
 			children = (
-				E12BC5A62B4612C8000897E7 /* Community Resource Guide */,
-				E12BC5B82B4612CA000897E7 /* Community Resource GuideTests */,
-				E12BC5C22B4612CA000897E7 /* Community Resource GuideUITests */,
+				E12BC5A62B4612C8000897E7 /* Philly Resource Guide */,
+				E12BC5B82B4612CA000897E7 /* Philly Resource GuideTests */,
+				E12BC5C22B4612CA000897E7 /* Philly Resource GuideUITests */,
 				E12BC5A52B4612C8000897E7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +113,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E12BC5A62B4612C8000897E7 /* Community Resource Guide */ = {
+		E12BC5A62B4612C8000897E7 /* Philly Resource Guide */ = {
 			isa = PBXGroup;
 			children = (
 				E160572E2B50983E00B68BA5 /* Community-Resource-Guide-Info.plist */,
@@ -122,10 +122,10 @@
 				E174515C2B4CF447007F4D73 /* Model */,
 				E17451572B4838FB007F4D73 /* Controls */,
 				E12BC5AB2B4612CA000897E7 /* Assets.xcassets */,
-				E12BC5AD2B4612CA000897E7 /* Community_Resource_Guide.entitlements */,
+				E12BC5AD2B4612CA000897E7 /* Philly_Resource_Guide.entitlements */,
 				E12BC5AE2B4612CA000897E7 /* Preview Content */,
 			);
-			path = "Community Resource Guide";
+			path = "Philly Resource Guide";
 			sourceTree = "<group>";
 		};
 		E12BC5AE2B4612CA000897E7 /* Preview Content */ = {
@@ -136,21 +136,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E12BC5B82B4612CA000897E7 /* Community Resource GuideTests */ = {
+		E12BC5B82B4612CA000897E7 /* Philly Resource GuideTests */ = {
 			isa = PBXGroup;
 			children = (
 				E12BC5B92B4612CA000897E7 /* Community_Resource_GuideTests.swift */,
 			);
-			path = "Community Resource GuideTests";
+			path = "Philly Resource GuideTests";
 			sourceTree = "<group>";
 		};
-		E12BC5C22B4612CA000897E7 /* Community Resource GuideUITests */ = {
+		E12BC5C22B4612CA000897E7 /* Philly Resource GuideUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E12BC5C32B4612CA000897E7 /* Community_Resource_GuideUITests.swift */,
-				E12BC5C52B4612CA000897E7 /* Community_Resource_GuideUITestsLaunchTests.swift */,
+				E12BC5C32B4612CA000897E7 /* Philly_Resource_GuideUITests.swift */,
+				E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */,
 			);
-			path = "Community Resource GuideUITests";
+			path = "Philly Resource GuideUITests";
 			sourceTree = "<group>";
 		};
 		E17451572B4838FB007F4D73 /* Controls */ = {
@@ -175,7 +175,7 @@
 		E174515D2B4CF452007F4D73 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E12BC5A72B4612C8000897E7 /* Community_Resource_GuideApp.swift */,
+				E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */,
 				E12BC5A92B4612C8000897E7 /* ContentView.swift */,
 				E174515A2B489DEB007F4D73 /* ListView.swift */,
 				E1911D5F2B4FA09A0000BA2E /* DetailView.swift */,
@@ -272,7 +272,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E12BC59F2B4612C8000897E7 /* Build configuration list for PBXProject "Community Resource Guide" */;
+			buildConfigurationList = E12BC59F2B4612C8000897E7 /* Build configuration list for PBXProject "Philly Resource Guide" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -327,7 +327,7 @@
 				E1911D5E2B4F869A0000BA2E /* Header.swift in Sources */,
 				E12BC5AA2B4612C8000897E7 /* ContentView.swift in Sources */,
 				E1911D602B4FA09A0000BA2E /* DetailView.swift in Sources */,
-				E12BC5A82B4612C8000897E7 /* Community_Resource_GuideApp.swift in Sources */,
+				E12BC5A82B4612C8000897E7 /* Philly_Resource_GuideApp.swift in Sources */,
 				E16057302B51A2EA00B68BA5 /* ContactControl.swift in Sources */,
 				E1F0D6152B5337F7005B5FA0 /* GeocodeService.swift in Sources */,
 				E174515B2B489DEB007F4D73 /* ListView.swift in Sources */,
@@ -350,8 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E12BC5C42B4612CA000897E7 /* Community_Resource_GuideUITests.swift in Sources */,
-				E12BC5C62B4612CA000897E7 /* Community_Resource_GuideUITestsLaunchTests.swift in Sources */,
+				E12BC5C42B4612CA000897E7 /* Philly_Resource_GuideUITests.swift in Sources */,
+				E12BC5C62B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,16 +491,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "Community Resource Guide/Community_Resource_Guide.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = "Philly Resource Guide/Philly_Resource_Guide.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Community Resource Guide/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Philly Resource Guide/Preview Content\"";
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Community-Resource-Guide-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Philly Resource Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -517,7 +519,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Community-Resource-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Philly-Resource-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -533,16 +535,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
-				CODE_SIGN_ENTITLEMENTS = "Community Resource Guide/Community_Resource_Guide.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = "Philly Resource Guide/Philly_Resource_Guide.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Community Resource Guide/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Philly Resource Guide/Preview Content\"";
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Community-Resource-Guide-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Philly Resource Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -559,7 +563,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Community-Resource-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Philly-Resource-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -581,7 +585,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Community-Resource-GuideTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Philly-Resource-GuideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -604,7 +608,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Community-Resource-GuideTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Philly-Resource-GuideTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -626,7 +630,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Community-Resource-GuideUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Philly-Resource-GuideUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -648,7 +652,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Community-Resource-GuideUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dekebowman.Philly-Resource-GuideUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -662,7 +666,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E12BC59F2B4612C8000897E7 /* Build configuration list for PBXProject "Community Resource Guide" */ = {
+		E12BC59F2B4612C8000897E7 /* Build configuration list for PBXProject "Philly Resource Guide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E12BC5C72B4612CA000897E7 /* Debug */,

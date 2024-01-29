@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 class NetworkManager: ObservableObject {
     
     @Published var apiData = [Record]()
