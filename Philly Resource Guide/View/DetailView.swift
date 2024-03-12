@@ -13,7 +13,7 @@ struct DetailView: View {
     var apiData: Fields
     
     var body: some View {
-        TileView(label: apiData.label!, imageUrl: apiData.logo?.first?.url ?? "")
+        TileView(label: apiData.label, imageUrl: apiData.logo?.first?.url ?? "")
         List {
             if let description = apiData.descriptionNotes {
                 Section {
@@ -42,14 +42,7 @@ struct DetailView: View {
             
             Section {
                 if let emergencyAssistanceNumber = apiData.emergencyAssistanceNumber {
-                    VStack(alignment: .leading) {
-                        Text("Emergency")
-                            .font(.caption)
-                            .foregroundStyle(.red)
-                        Link(destination: URL(string: "tel:\(emergencyAssistanceNumber)")!, label: {
-                            Text(emergencyAssistanceNumber)
-                                .textSelection(.enabled)
-                        })}.textSelection(.enabled)
+                    ContactControl.emergerncy(data: emergencyAssistanceNumber)
                 }
                 if let phoneContact = apiData.phoneContact {
                     ContactControl.phone(data: phoneContact) }
@@ -66,6 +59,8 @@ struct DetailView: View {
                     
                     HStack(alignment: .top) {
                         VStack(alignment: .leading) {
+                            Map()
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                             Text("Location")
                                 .font(.caption)
                             Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
@@ -78,13 +73,7 @@ struct DetailView: View {
                             })
                         }
                         .textSelection(.enabled)
-                        //                                Spacer()
-                        //                                Map {
-                        //                                    Annotation(apiData.label, location: location )
-                        //                                }
-                        //                                    .frame(width: 100, height: 100)
-                        //                    }
-                        
+
                     }
                 }
             }

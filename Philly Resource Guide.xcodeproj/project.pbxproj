@@ -16,6 +16,7 @@
 		E12BC5C62B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */; };
 		E12BC5D32B4613BB000897E7 /* CategoryListTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */; };
 		E12BC5DC2B4741D6000897E7 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5DB2B4741D6000897E7 /* TileView.swift */; };
+		E15A7A6B2B75F1840078FB03 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */; };
 		E16057302B51A2EA00B68BA5 /* ContactControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160572F2B51A2EA00B68BA5 /* ContactControl.swift */; };
 		E17451592B4899E6007F4D73 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17451582B4899E6007F4D73 /* MapView.swift */; };
 		E174515B2B489DEB007F4D73 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174515A2B489DEB007F4D73 /* ListView.swift */; };
@@ -23,6 +24,7 @@
 		E17451642B4E11A2007F4D73 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17451632B4E11A2007F4D73 /* NetworkManager.swift */; };
 		E1911D5E2B4F869A0000BA2E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1911D5D2B4F869A0000BA2E /* Header.swift */; };
 		E1911D602B4FA09A0000BA2E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1911D5F2B4FA09A0000BA2E /* DetailView.swift */; };
+		E1AB63702B683AC300C3E01F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB636F2B683AC300C3E01F /* ListViewModel.swift */; };
 		E1F0D6152B5337F7005B5FA0 /* GeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0D6142B5337F7005B5FA0 /* GeocodeService.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,7 @@
 		E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTile.swift; sourceTree = "<group>"; };
 		E12BC5DB2B4741D6000897E7 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E160572E2B50983E00B68BA5 /* Community-Resource-Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Community-Resource-Guide-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E160572F2B51A2EA00B68BA5 /* ContactControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactControl.swift; sourceTree = "<group>"; };
 		E17451582B4899E6007F4D73 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		E17451632B4E11A2007F4D73 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E1911D5D2B4F869A0000BA2E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E1911D5F2B4FA09A0000BA2E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		E1AB636F2B683AC300C3E01F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		E1F0D6142B5337F7005B5FA0 /* GeocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -178,7 +182,9 @@
 				E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */,
 				E12BC5A92B4612C8000897E7 /* ContentView.swift */,
 				E174515A2B489DEB007F4D73 /* ListView.swift */,
+				E1AB636F2B683AC300C3E01F /* ListViewModel.swift */,
 				E1911D5F2B4FA09A0000BA2E /* DetailView.swift */,
+				E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */,
 				E17451582B4899E6007F4D73 /* MapView.swift */,
 			);
 			path = View;
@@ -332,6 +338,8 @@
 				E1F0D6152B5337F7005B5FA0 /* GeocodeService.swift in Sources */,
 				E174515B2B489DEB007F4D73 /* ListView.swift in Sources */,
 				E17451592B4899E6007F4D73 /* MapView.swift in Sources */,
+				E15A7A6B2B75F1840078FB03 /* DetailViewModel.swift in Sources */,
+				E1AB63702B683AC300C3E01F /* ListViewModel.swift in Sources */,
 				E17451612B4CF56B007F4D73 /* CommunityResourceModel.swift in Sources */,
 				E12BC5DC2B4741D6000897E7 /* TileView.swift in Sources */,
 				E12BC5D32B4613BB000897E7 /* CategoryListTile.swift in Sources */,

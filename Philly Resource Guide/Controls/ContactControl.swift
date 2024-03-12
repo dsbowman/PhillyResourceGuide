@@ -9,6 +9,23 @@ import SwiftUI
 
 class ContactControl {
     
+    struct emergerncy: View {
+        var data: String
+        var label = "Emergency"
+        
+        var body: some View {
+            
+            VStack(alignment: .leading) {
+                Text(label)
+                    .font(.caption)
+                    .foregroundStyle(.red)
+                Link(destination: URL(string: "tel:\(data)")!, label: {
+                    Text(data)
+                        .textSelection(.enabled)
+                })}.textSelection(.enabled)
+        }
+    }
+    
     struct phone: View {
         var icon = "phone.fill"
         var data: String
@@ -16,7 +33,6 @@ class ContactControl {
         var fontColor: Color?
         
         var body: some View {
-            
             
             VStack(alignment: .leading) {
                 Text(label ?? "phone")

@@ -9,14 +9,15 @@ import SwiftUI
 
 struct ListView: View {
     
-    @ObservedObject var networkManager = NetworkManager()
+    @StateObject var viewModel = ListViewModel()
+    
 
     
     var body: some View {
         NavigationView {
-            List {ForEach(networkManager.filteredResources.sorted(by: {$0.fields.label ?? "" < $1.fields.label ?? ""}), id: \.id) { apiData in
+            List {ForEach(viewModel.filteredResources.sorted(by: {$0.fields.label < $1.fields.label }), id: \.id) { apiData in
                 NavigationLink(destination: DetailView(apiData: apiData.fields)) {
-                    TileView(label: apiData.fields.label! , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
+                    TileView(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
                 }
             }
             }
@@ -29,13 +30,19 @@ struct ListView: View {
 //                        .fontWeight(.semibold)
 //                }
 //            }
-            .searchable(text: $networkManager.searchText, placement: .automatic)
+            .searchable(text: $viewModel.searchText, placement: .automatic, prompt: "Search Resources")
+            .overlay {
+                if viewModel.filteredResources.isEmpty {
+                    ContentUnavailableView.search(text: viewModel.searchText)
+                }
+            }
             .refreshable {
-                self.networkManager.getData()
+                viewModel.getResources()
             }
         }
         
-        .onAppear(perform: self.networkManager.getData)
+        .onAppear {
+            viewModel.getResources()}
     }
 }
 
