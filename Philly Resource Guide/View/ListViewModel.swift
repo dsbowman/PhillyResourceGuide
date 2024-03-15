@@ -22,7 +22,6 @@ class ListViewModel: ObservableObject {
     }
     
     init() {
-        self.networkManager = NetworkManager()
         self.getResources()
     }
     

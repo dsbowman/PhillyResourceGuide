@@ -14,7 +14,7 @@ struct ListView: View {
 
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {ForEach(viewModel.filteredResources.sorted(by: {$0.fields.label < $1.fields.label }), id: \.id) { apiData in
                 NavigationLink(destination: DetailView(apiData: apiData.fields)) {
                     TileView(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
@@ -40,9 +40,6 @@ struct ListView: View {
                 viewModel.getResources()
             }
         }
-        
-        .onAppear {
-            viewModel.getResources()}
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebKit
 
 class ContactControl {
     
@@ -66,6 +67,7 @@ class ContactControl {
     }
     
     struct website: View {
+        @State private var showWebView = false
         var icon = "globe"
         var url: String
         var label: String?
@@ -75,18 +77,51 @@ class ContactControl {
             VStack(alignment: .leading) {
                 Text("website")
                     .font(.caption)
-
-                Link(destination: URL(string: url)!, label: {
+//                NavigationLink {
+//                    WebView(url: url)
+//                } label: {
+//                    Link(destination: URL(string: url)!, label: {
+//                        Text(url)
+//                            .textSelection(.enabled)
+//                    })
+//                }
+                
+                Button(action: {
+                    showWebView.toggle()
+                }, label: {
                     Text(url)
                         .textSelection(.enabled)
+                        .foregroundStyle(Color.blue)
+                })
+                .sheet(isPresented: $showWebView, content: {
+                    WebView(url: url)
                 })
             }
         }
         
     }
-        
-    
 }
+
+
+struct WebView: UIViewRepresentable{
+    
+    var url:String
+    
+    
+    func makeUIView(context: Context) -> some UIView {
+        guard let url = URL(string: url) else {
+            return WKWebView()
+        }
+        let webview = WKWebView()
+        webview.load(URLRequest(url: url))
+        return webview
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+    }
+}
+
 
 #Preview {
     ContactControl.website(url: "dekebowman.smugmug.com") as any View

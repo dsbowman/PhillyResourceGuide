@@ -23,8 +23,6 @@ struct DetailView: View {
                             .padding(.bottom, 5)
                         Text(description)
                             .textSelection(.enabled)
-                        
-                        
                     }
                 }
             }
@@ -59,8 +57,8 @@ struct DetailView: View {
                     
                     HStack(alignment: .top) {
                         VStack(alignment: .leading) {
-                            Map()
-                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+//                            Map()
+//                                .frame(maxWidth: .infinity, maxHeight: 300, alignment: .center)
                             Text("Location")
                                 .font(.caption)
                             Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
