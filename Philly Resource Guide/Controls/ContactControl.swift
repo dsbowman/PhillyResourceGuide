@@ -94,7 +94,26 @@ class ContactControl {
                         .foregroundStyle(Color.blue)
                 })
                 .sheet(isPresented: $showWebView, content: {
-                    WebView(url: url)
+                    NavigationView {
+                        VStack {
+                            WebView(url: url)
+                        }
+                        .toolbar (content: {
+                            ToolbarItem(placement: .automatic) {
+                                ShareLink(item: URL(string: url)!) {
+                                    Label("Share", systemImage: "square.and.arrow.up")
+                                }
+                            }
+                            ToolbarItem(placement: .automatic) {
+                                Button("Done") {
+                                    showWebView = false
+                                }
+                            }
+
+                        })
+                    }
+
+                    
                 })
             }
         }
