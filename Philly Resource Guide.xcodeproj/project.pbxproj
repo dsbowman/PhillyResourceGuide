@@ -15,16 +15,26 @@
 		E12BC5C42B4612CA000897E7 /* Philly_Resource_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C32B4612CA000897E7 /* Philly_Resource_GuideUITests.swift */; };
 		E12BC5C62B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */; };
 		E12BC5D32B4613BB000897E7 /* CategoryListTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */; };
-		E12BC5DC2B4741D6000897E7 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5DB2B4741D6000897E7 /* TileView.swift */; };
+		E12BC5DC2B4741D6000897E7 /* largetile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5DB2B4741D6000897E7 /* largetile.swift */; };
+		E13BF4C82C52D83400979B81 /* ResyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BF4C72C52D83400979B81 /* ResyView.swift */; };
 		E15A7A6B2B75F1840078FB03 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */; };
 		E16057302B51A2EA00B68BA5 /* ContactControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E160572F2B51A2EA00B68BA5 /* ContactControl.swift */; };
 		E17451592B4899E6007F4D73 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17451582B4899E6007F4D73 /* MapView.swift */; };
 		E174515B2B489DEB007F4D73 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174515A2B489DEB007F4D73 /* ListView.swift */; };
 		E17451612B4CF56B007F4D73 /* CommunityResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17451602B4CF56B007F4D73 /* CommunityResourceModel.swift */; };
 		E17451642B4E11A2007F4D73 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17451632B4E11A2007F4D73 /* NetworkManager.swift */; };
+		E174C1222C17A1D8001A792C /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E174C1212C17A1D8001A792C /* ListItem.swift */; };
+		E17843B92BB0ADBA00E4E3CD /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17843B82BB0ADBA00E4E3CD /* MapViewModel.swift */; };
 		E1911D5E2B4F869A0000BA2E /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1911D5D2B4F869A0000BA2E /* Header.swift */; };
 		E1911D602B4FA09A0000BA2E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1911D5F2B4FA09A0000BA2E /* DetailView.swift */; };
 		E1AB63702B683AC300C3E01F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB636F2B683AC300C3E01F /* ListViewModel.swift */; };
+		E1CE81762C414B5000F626EC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE81752C414B5000F626EC /* Alert.swift */; };
+		E1CE817C2C414D0600F626EC /* APError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE817B2C414D0600F626EC /* APError.swift */; };
+		E1CE817E2C41B5A700F626EC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE817D2C41B5A700F626EC /* LoadingView.swift */; };
+		E1CE81822C43080E00F626EC /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE81812C43080E00F626EC /* RemoteImage.swift */; };
+		E1CE81842C430B9F00F626EC /* TileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE81832C430B9F00F626EC /* TileListView.swift */; };
+		E1CE81862C445C3700F626EC /* NewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CE81852C445C3700F626EC /* NewResource.swift */; };
+		E1D19F1F2BA8C2CA0069F4D2 /* ContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D19F1E2BA8C2CA0069F4D2 /* ContactButton.swift */; };
 		E1F0D6152B5337F7005B5FA0 /* GeocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F0D6142B5337F7005B5FA0 /* GeocodeService.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +68,8 @@
 		E12BC5C32B4612CA000897E7 /* Philly_Resource_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideUITests.swift; sourceTree = "<group>"; };
 		E12BC5C52B4612CA000897E7 /* Philly_Resource_GuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListTile.swift; sourceTree = "<group>"; };
-		E12BC5DB2B4741D6000897E7 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
+		E12BC5DB2B4741D6000897E7 /* largetile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = largetile.swift; sourceTree = "<group>"; };
+		E13BF4C72C52D83400979B81 /* ResyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResyView.swift; sourceTree = "<group>"; };
 		E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		E160572E2B50983E00B68BA5 /* Community-Resource-Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Community-Resource-Guide-Info.plist"; sourceTree = SOURCE_ROOT; };
 		E160572F2B51A2EA00B68BA5 /* ContactControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactControl.swift; sourceTree = "<group>"; };
@@ -66,9 +77,18 @@
 		E174515A2B489DEB007F4D73 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		E17451602B4CF56B007F4D73 /* CommunityResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResourceModel.swift; sourceTree = "<group>"; };
 		E17451632B4E11A2007F4D73 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E174C1212C17A1D8001A792C /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		E17843B82BB0ADBA00E4E3CD /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		E1911D5D2B4F869A0000BA2E /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		E1911D5F2B4FA09A0000BA2E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		E1AB636F2B683AC300C3E01F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		E1CE81752C414B5000F626EC /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		E1CE817B2C414D0600F626EC /* APError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APError.swift; sourceTree = "<group>"; };
+		E1CE817D2C41B5A700F626EC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E1CE81812C43080E00F626EC /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		E1CE81832C430B9F00F626EC /* TileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileListView.swift; sourceTree = "<group>"; };
+		E1CE81852C445C3700F626EC /* NewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResource.swift; sourceTree = "<group>"; };
+		E1D19F1E2BA8C2CA0069F4D2 /* ContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactButton.swift; sourceTree = "<group>"; };
 		E1F0D6142B5337F7005B5FA0 /* GeocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,10 +141,13 @@
 			isa = PBXGroup;
 			children = (
 				E160572E2B50983E00B68BA5 /* Community-Resource-Guide-Info.plist */,
+				E174515C2B4CF447007F4D73 /* Model */,
+				E1CE81742C414A0D00F626EC /* Alert */,
 				E17451622B4E118F007F4D73 /* Services */,
 				E174515D2B4CF452007F4D73 /* View */,
-				E174515C2B4CF447007F4D73 /* Model */,
+				E1CE81802C4307AA00F626EC /* Screens */,
 				E17451572B4838FB007F4D73 /* Controls */,
+				E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */,
 				E12BC5AB2B4612CA000897E7 /* Assets.xcassets */,
 				E12BC5AD2B4612CA000897E7 /* Philly_Resource_Guide.entitlements */,
 				E12BC5AE2B4612CA000897E7 /* Preview Content */,
@@ -160,10 +183,12 @@
 		E17451572B4838FB007F4D73 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				E12BC5DB2B4741D6000897E7 /* TileView.swift */,
+				E12BC5DB2B4741D6000897E7 /* largetile.swift */,
+				E174C1212C17A1D8001A792C /* ListItem.swift */,
 				E12BC5D22B4613BB000897E7 /* CategoryListTile.swift */,
 				E1911D5D2B4F869A0000BA2E /* Header.swift */,
 				E160572F2B51A2EA00B68BA5 /* ContactControl.swift */,
+				E1D19F1E2BA8C2CA0069F4D2 /* ContactButton.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -179,13 +204,9 @@
 		E174515D2B4CF452007F4D73 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */,
-				E12BC5A92B4612C8000897E7 /* ContentView.swift */,
-				E174515A2B489DEB007F4D73 /* ListView.swift */,
-				E1AB636F2B683AC300C3E01F /* ListViewModel.swift */,
-				E1911D5F2B4FA09A0000BA2E /* DetailView.swift */,
-				E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */,
-				E17451582B4899E6007F4D73 /* MapView.swift */,
+				E1CE817D2C41B5A700F626EC /* LoadingView.swift */,
+				E1CE81812C43080E00F626EC /* RemoteImage.swift */,
+				E1CE81852C445C3700F626EC /* NewResource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +218,31 @@
 				E1F0D6142B5337F7005B5FA0 /* GeocodeService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E1CE81742C414A0D00F626EC /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E1CE817B2C414D0600F626EC /* APError.swift */,
+				E1CE81752C414B5000F626EC /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		E1CE81802C4307AA00F626EC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E12BC5A92B4612C8000897E7 /* ContentView.swift */,
+				E1AB636F2B683AC300C3E01F /* ListViewModel.swift */,
+				E174515A2B489DEB007F4D73 /* ListView.swift */,
+				E15A7A6A2B75F1840078FB03 /* DetailViewModel.swift */,
+				E1911D5F2B4FA09A0000BA2E /* DetailView.swift */,
+				E17843B82BB0ADBA00E4E3CD /* MapViewModel.swift */,
+				E17451582B4899E6007F4D73 /* MapView.swift */,
+				E1CE81832C430B9F00F626EC /* TileListView.swift */,
+				E13BF4C72C52D83400979B81 /* ResyView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +309,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					E12BC5A32B4612C8000897E7 = {
 						CreatedOnToolsVersion = 15.0;
@@ -329,20 +375,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CE81762C414B5000F626EC /* Alert.swift in Sources */,
 				E17451642B4E11A2007F4D73 /* NetworkManager.swift in Sources */,
+				E1CE81862C445C3700F626EC /* NewResource.swift in Sources */,
 				E1911D5E2B4F869A0000BA2E /* Header.swift in Sources */,
 				E12BC5AA2B4612C8000897E7 /* ContentView.swift in Sources */,
 				E1911D602B4FA09A0000BA2E /* DetailView.swift in Sources */,
 				E12BC5A82B4612C8000897E7 /* Philly_Resource_GuideApp.swift in Sources */,
 				E16057302B51A2EA00B68BA5 /* ContactControl.swift in Sources */,
 				E1F0D6152B5337F7005B5FA0 /* GeocodeService.swift in Sources */,
+				E1CE81842C430B9F00F626EC /* TileListView.swift in Sources */,
+				E17843B92BB0ADBA00E4E3CD /* MapViewModel.swift in Sources */,
+				E1CE81822C43080E00F626EC /* RemoteImage.swift in Sources */,
 				E174515B2B489DEB007F4D73 /* ListView.swift in Sources */,
 				E17451592B4899E6007F4D73 /* MapView.swift in Sources */,
 				E15A7A6B2B75F1840078FB03 /* DetailViewModel.swift in Sources */,
+				E1CE817C2C414D0600F626EC /* APError.swift in Sources */,
+				E1CE817E2C41B5A700F626EC /* LoadingView.swift in Sources */,
 				E1AB63702B683AC300C3E01F /* ListViewModel.swift in Sources */,
+				E174C1222C17A1D8001A792C /* ListItem.swift in Sources */,
 				E17451612B4CF56B007F4D73 /* CommunityResourceModel.swift in Sources */,
-				E12BC5DC2B4741D6000897E7 /* TileView.swift in Sources */,
+				E1D19F1F2BA8C2CA0069F4D2 /* ContactButton.swift in Sources */,
+				E12BC5DC2B4741D6000897E7 /* largetile.swift in Sources */,
 				E12BC5D32B4613BB000897E7 /* CategoryListTile.swift in Sources */,
+				E13BF4C82C52D83400979B81 /* ResyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +469,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -474,6 +531,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -503,6 +561,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Philly Resource Guide/Preview Content\"";
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -547,6 +606,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Philly Resource Guide/Preview Content\"";
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -588,6 +648,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -611,6 +672,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -633,6 +695,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -655,6 +718,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = HSMH5RCF8L;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
