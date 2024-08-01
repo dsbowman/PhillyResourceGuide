@@ -8,15 +8,17 @@
 
 import Foundation
 import SwiftUI
+import MapKit
 
 // MARK: - CommunityResourceModel
-struct CommunityResourceModel: Decodable {
+struct CommunityResourceModel: Decodable  {
     var records: [Record]
 }
 
 // MARK: - Record
-struct Record: Decodable {
-    var id, createdTime: String?
+struct Record: Decodable, Identifiable {
+    var id: String
+    var createdTime: String?
     var fields: Fields
 }
 
@@ -32,6 +34,8 @@ struct Fields: Decodable {
     var hoursOfOperation, phoneContact, emergencyAssistanceNumber: String?
     var phoneContact2, street1, street2, email: String?
     var state, zip, city: String?
+    var location: String?
+    var locationCoordinate: CLLocationCoordinate2D?
 
     enum CodingKeys: String, CodingKey {
         case descriptionNotes = "Description / Notes"
@@ -75,6 +79,7 @@ struct Full: Decodable {
     var url: String?
     var width, height: Int?
 }
+
 
 enum TypeEnum: String, Decodable {
     case imageJPEG = "image/jpeg"
