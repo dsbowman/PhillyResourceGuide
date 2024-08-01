@@ -7,6 +7,7 @@
 
 import SwiftUI
 import WebKit
+import SafariServices
 
 class ContactControl {
     
@@ -77,15 +78,7 @@ class ContactControl {
             VStack(alignment: .leading) {
                 Text("website")
                     .font(.caption)
-//                NavigationLink {
-//                    WebView(url: url)
-//                } label: {
-//                    Link(destination: URL(string: url)!, label: {
-//                        Text(url)
-//                            .textSelection(.enabled)
-//                    })
-//                }
-                
+
                 Button(action: {
                     showWebView.toggle()
                 }, label: {
@@ -94,52 +87,31 @@ class ContactControl {
                         .foregroundStyle(Color.blue)
                 })
                 .sheet(isPresented: $showWebView, content: {
-                    NavigationView {
-                        VStack {
-                            WebView(url: url)
-                        }
-                        .toolbar (content: {
-                            ToolbarItem(placement: .automatic) {
-                                ShareLink(item: URL(string: url)!) {
-                                    Label("Share", systemImage: "square.and.arrow.up")
-                                }
-                            }
-                            ToolbarItem(placement: .automatic) {
-                                Button("Done") {
-                                    showWebView = false
-                                }
-                            }
-
+                            WebView(url: URL(string: url)!)
+                        .ignoresSafeArea()
+                        
                         })
-                    }
-
                     
-                })
             }
+            
         }
         
     }
 }
 
 
-struct WebView: UIViewRepresentable{
+struct WebView: UIViewControllerRepresentable {
     
-    var url:String
+    var url: URL
+  
     
-    
-    func makeUIView(context: Context) -> some UIView {
-        guard let url = URL(string: url) else {
-            return WKWebView()
+    func makeUIViewController(context: UIViewControllerRepresentableContext<WebView>) -> SFSafariViewController {
+            SFSafariViewController(url: url)
         }
-        let webview = WKWebView()
-        webview.load(URLRequest(url: url))
-        return webview
-    }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        
-    }
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: UIViewControllerRepresentableContext<WebView>) {}
 }
+
 
 
 #Preview {
