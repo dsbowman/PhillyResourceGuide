@@ -17,6 +17,8 @@ class MapViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var isSheetPresented = true
     @Published var mapRegion: MKCoordinateRegion? = nil // Make it optional
+    @Published var isShowingDetail = false
+    @Published var selectedResource: Fields?
     
     var columns: [GridItem] = [GridItem(.adaptive(minimum: 350))]
     

@@ -13,7 +13,7 @@ struct ListItem: View {
     var description: String?
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack(alignment: .leading) {
             if let imageUrl = imageUrl, let _ = URL(string: imageUrl) {
                 HStack {
 //                    AsyncImage(url: url) { image in
@@ -26,6 +26,7 @@ struct ListItem: View {
 //
 //
 //                    }
+                    Spacer().frame(width: 10)
                     ResourceRemoteImage(urlString: imageUrl)
                         .padding(5)
                         .aspectRatio(contentMode: .fit)
@@ -39,6 +40,7 @@ struct ListItem: View {
                         .fontWeight(.semibold)
                         .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                         .minimumScaleFactor(0.75)
+                    Spacer()
                 }
                 
             } else {

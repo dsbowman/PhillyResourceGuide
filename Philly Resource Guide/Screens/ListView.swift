@@ -15,38 +15,61 @@ struct ListView: View {
         ZStack {
             NavigationStack {
                 List {ForEach(viewModel.filteredResources.sorted(by: {$0.fields.label < $1.fields.label }), id: \.id) { apiData in
-                    NavigationLink(destination: DetailView(apiData: apiData.fields)) {
-                        ListItem(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
-                    }
                     
+                    ListItem(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
+                        .onTapGesture {
+                            viewModel.selectedResource = apiData.fields
+                            viewModel.isShowingDetail = true
+                        }
+                    
+                    
+                    }
                 }
+                .listStyle(.inset)
+                .navigationTitle("Philly Resources")
+                .toolbar {
+                    ToolbarItem {
+                        Button {
+                            viewModel.newResource = true
+                        } label: {
+                            Image(systemName: "plus.circle.fill")
+                                .imageScale(.large)
+                                .fontWeight(.semibold)
+                                .tint(.teal)
+                        }
+                    }
                 }
-                .listStyle(.plain)
                 
                 .searchable(text: $viewModel.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search Resources")
-                .overlay {
-                    if viewModel.filteredResources.isEmpty && viewModel.isLoading {
-                        LoadingView()
-                    } else if viewModel.filteredResources.isEmpty {
-                        ContentUnavailableView.search(text: viewModel.searchText)
-                    }
-                }
                 .task { viewModel.getResources() }
                 .refreshable { viewModel.getResources() }
                 
             }
-            .navigationTitle("Philly Resources")
             
+        }
+        .overlay {
+            if viewModel.filteredResources.isEmpty && viewModel.isLoading {
+                LoadingView()
+            } else if viewModel.filteredResources.isEmpty {
+                ContentUnavailableView.search(text: viewModel.searchText)
+            }
         }
         .alert(item: $viewModel.alertItem) { alertItem in
             Alert(title: alertItem.title,
-                 message: alertItem.message,
-                 dismissButton: alertItem.dismissButton)
-        
+                  message: alertItem.message,
+                  dismissButton: alertItem.dismissButton)
             
         }
+        .sheet(isPresented: $viewModel.newResource) {
+            NewResource(newResource: $viewModel.newResource)
+                .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: $viewModel.isShowingDetail) {
+            DetailView(apiData: viewModel.selectedResource ?? MockData.sampleResource)
+                .presentationDragIndicator(.visible)
+        }
     }
-   
+    
 }
 
 #Preview {

@@ -1,28 +1,19 @@
+////
+////  LocationService.swift
+////  Community Resource Guide
+////
+////  Created by Deke Bowman on 8/5/24.
+////
 //
-//  DetailViewModel.swift
-//  Community Resource Guide
+//import SwiftUI
+//import MapKit
 //
-//  Created by Deke Bowman on 2/8/24.
+//class LocationService {
 //
-
-import Foundation
-import SwiftUI
-import MapKit
-import CoreLocation
-
-class DetailViewModel: ObservableObject {
-    
-//    @Published var alertItem: AlertItem?
-//    @Published var isLoading = true
-//    @Published var searchText: String = ""
-//    @Published var isSheetPresented = true
-//    @Published var mapRegion: MKCoordinateRegion? = nil // Make it optional
-//    @Published var isShowingDetail = false
-//    @Published var selectedResource: Fields?
-//    
-//    func fetchCoordinates(record: Fields) {
-//
-//            let address = "\(record.street1 ?? ""), \(record.street2 ?? ""), \(record.city ?? ""), \(record.state ?? ""), \(record.zip ?? "")"
+//    func fetchCoordinates(resources: [Record]) {
+//        for i in 0..<resources.count {
+//            let record = resources[i]
+//            let address = "\(record.fields.street1 ?? ""), \(record.fields.street2 ?? ""), \(record.fields.city ?? ""), \(record.fields.state ?? ""), \(record.fields.zip ?? "")"
 //            
 //            CLGeocoder().geocodeAddressString(address) { (placemarks, error) in
 //                if let error = error {
@@ -34,20 +25,19 @@ class DetailViewModel: ObservableObject {
 //                   let location = placemark.location {
 //
 //                    DispatchQueue.main.async { // Update on main thread
-//                        self.record.locationCoordinate = location.coordinate
+//                        self.resources[i].fields.locationCoordinate = location.coordinate
 //                    }
 //                } else {
 //                    print("No coordinates found for \(address)")
 //                }
 //            }
-//            
+////        }
 //        DispatchQueue.main.async {
-//            self.calculateRegion()
-//            self.isLoading = false  // Done loading
+//            self.calculateRegion(recourses: <#[Record]#>)
 //        }
 //    }
 //    
-//    func calculateRegion() {
+//    func calculateRegion(recourses: [Record]) {
 //            var minLatitude = 90.0
 //            var maxLatitude = -90.0
 //            var minLongitude = 180.0
@@ -76,8 +66,6 @@ class DetailViewModel: ObservableObject {
 //
 //            mapRegion = MKCoordinateRegion(center: center, span: span)
 //        }
+//
 //    
-    
-    
-}
-
+//}

@@ -11,6 +11,7 @@ struct largeTile: View {
     var label: String = "Organization Name"
     var imageUrl: String?
     var description: String?
+    var phone: String?
     
     var body: some View {
         VStack(alignment: .center) {
@@ -18,8 +19,8 @@ struct largeTile: View {
                 VStack() {
                     ResourceRemoteImage(urlString: imageUrl)
                         .aspectRatio(contentMode: .fit)
-                        .padding(15)
-                        .frame(width: 350, height: 200)
+                        .padding(20)
+                        .frame(width: 350, height: 150)
                         .background(.white)
                         .cornerRadius(20)
                     
@@ -29,7 +30,7 @@ struct largeTile: View {
                             .multilineTextAlignment(.leading)
                             .fontWeight(.semibold)
                         Spacer()
-                        Image(systemName: "heart")
+//                        Image(systemName: "heart")
                     }
                     .padding(5)
                     
@@ -41,6 +42,7 @@ struct largeTile: View {
                 VStack(alignment: .center) {
                         Text(label)
                             .foregroundStyle(Color.primary)
+                            .fontWeight(.semibold)
                             .padding()
                     
                 }

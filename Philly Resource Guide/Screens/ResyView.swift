@@ -15,6 +15,12 @@ struct ResyView: View {
     var body: some View {
         
         ZStack {
+
+            Button(action: {
+                viewModel.isShowingList = true
+            }, label: {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            })
             
 
         }
@@ -25,7 +31,7 @@ struct ResyView: View {
                     TileSheetView()
                         
                 }
-                .presentationDragIndicator(.visible)
+                
             }
             
         }

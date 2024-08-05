@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E11BEBA92C5D29F2002DE6BA /* NewResourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BEBA82C5D29F2002DE6BA /* NewResourceModel.swift */; };
+		E11BEBAB2C5D4322002DE6BA /* NewResourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BEBAA2C5D4322002DE6BA /* NewResourceViewModel.swift */; };
+		E11BEBAD2C612DFD002DE6BA /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11BEBAC2C612DFD002DE6BA /* LocationService.swift */; };
 		E12BC5A82B4612C8000897E7 /* Philly_Resource_GuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */; };
 		E12BC5AA2B4612C8000897E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E12BC5A92B4612C8000897E7 /* ContentView.swift */; };
 		E12BC5AC2B4612CA000897E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E12BC5AB2B4612CA000897E7 /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E11BEBA82C5D29F2002DE6BA /* NewResourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResourceModel.swift; sourceTree = "<group>"; };
+		E11BEBAA2C5D4322002DE6BA /* NewResourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResourceViewModel.swift; sourceTree = "<group>"; };
+		E11BEBAC2C612DFD002DE6BA /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		E12BC5A42B4612C8000897E7 /* Community Resource Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Community Resource Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12BC5A72B4612C8000897E7 /* Philly_Resource_GuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Philly_Resource_GuideApp.swift; sourceTree = "<group>"; };
 		E12BC5A92B4612C8000897E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -197,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E17451602B4CF56B007F4D73 /* CommunityResourceModel.swift */,
+				E11BEBA82C5D29F2002DE6BA /* NewResourceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,7 +213,6 @@
 			children = (
 				E1CE817D2C41B5A700F626EC /* LoadingView.swift */,
 				E1CE81812C43080E00F626EC /* RemoteImage.swift */,
-				E1CE81852C445C3700F626EC /* NewResource.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +222,7 @@
 			children = (
 				E17451632B4E11A2007F4D73 /* NetworkManager.swift */,
 				E1F0D6142B5337F7005B5FA0 /* GeocodeService.swift */,
+				E11BEBAC2C612DFD002DE6BA /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -241,6 +248,8 @@
 				E17451582B4899E6007F4D73 /* MapView.swift */,
 				E1CE81832C430B9F00F626EC /* TileListView.swift */,
 				E13BF4C72C52D83400979B81 /* ResyView.swift */,
+				E11BEBAA2C5D4322002DE6BA /* NewResourceViewModel.swift */,
+				E1CE81852C445C3700F626EC /* NewResource.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -380,7 +389,9 @@
 				E1CE81862C445C3700F626EC /* NewResource.swift in Sources */,
 				E1911D5E2B4F869A0000BA2E /* Header.swift in Sources */,
 				E12BC5AA2B4612C8000897E7 /* ContentView.swift in Sources */,
+				E11BEBA92C5D29F2002DE6BA /* NewResourceModel.swift in Sources */,
 				E1911D602B4FA09A0000BA2E /* DetailView.swift in Sources */,
+				E11BEBAD2C612DFD002DE6BA /* LocationService.swift in Sources */,
 				E12BC5A82B4612C8000897E7 /* Philly_Resource_GuideApp.swift in Sources */,
 				E16057302B51A2EA00B68BA5 /* ContactControl.swift in Sources */,
 				E1F0D6152B5337F7005B5FA0 /* GeocodeService.swift in Sources */,
@@ -395,6 +406,7 @@
 				E1AB63702B683AC300C3E01F /* ListViewModel.swift in Sources */,
 				E174C1222C17A1D8001A792C /* ListItem.swift in Sources */,
 				E17451612B4CF56B007F4D73 /* CommunityResourceModel.swift in Sources */,
+				E11BEBAB2C5D4322002DE6BA /* NewResourceViewModel.swift in Sources */,
 				E1D19F1F2BA8C2CA0069F4D2 /* ContactButton.swift in Sources */,
 				E12BC5DC2B4741D6000897E7 /* largetile.swift in Sources */,
 				E12BC5D32B4613BB000897E7 /* CategoryListTile.swift in Sources */,

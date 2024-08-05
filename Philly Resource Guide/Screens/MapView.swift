@@ -10,20 +10,9 @@ import MapKit
 
 struct MapView: View {
     
-    @State var addressString = "1600 Pennsylvania Ave, Washington D.C."
-    @StateObject private var viewModel = MapViewModel()
-    @State private var position = MapCameraPosition.region(
-        MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275),
-            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
-        )
-    )
-    
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194), // Default location
-        span: MKCoordinateSpan(latitudeDelta: 0.5,
-                               longitudeDelta: 0.5)
-    )
+    @StateObject private var viewModel = ListViewModel()
+    @State private var settingsDetent = PresentationDetent.height(225)
+
     
     var body: some View {
         VStack {
@@ -32,38 +21,25 @@ struct MapView: View {
                     if let coordinate = record.fields.locationCoordinate {
                         Annotation(record.fields.label, coordinate: coordinate) {
                             Circle()
-                                .fill(.blue)
+                                .fill(.teal)
                                 .frame(width: 10, height: 10)
+                                .onTapGesture {
+                                    viewModel.selectedResource = record.fields
+                                    viewModel.isShowingDetail = true
+                                        
+                                }
+                                .frame(width: 30, height: 30)
                         }
+                     
                     }
                 }
 
             }
             .searchable(text: $viewModel.searchText)
-//            .sheet(isPresented: $viewModel.isSheetPresented) {
-//                
-//                ScrollView {
-//                    LazyVGrid(columns: viewModel.columns, spacing: 40) {ForEach(viewModel.filteredResources.sorted(by: {$0.fields.label < $1.fields.label }), id: \.id) { apiData in
-//                        NavigationLink(destination: DetailView(apiData: apiData.fields)) {
-//                            largeTile(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
-//                                .accentColor(.primary)
-//                        }
-//                        
-//                    }
-//                    }
-//                    .listStyle(.plain)
-//                    .task { viewModel.getResources() }
-//                    .refreshable { viewModel.getResources() }
-//                }
-//                DetailView(apiData: )
-//                .presentationDragIndicator(.visible)
-//                .presentationDetents([.height(250), .medium, .large])
-//                .navigationBarTitleDisplayMode(.inline)
-//            }
-            
-            
-            if viewModel.isLoading {
-                LoadingView()
+            .sheet(isPresented: $viewModel.isShowingDetail) {
+                DetailView(apiData: viewModel.selectedResource ?? MockData.sampleResource)
+                    .presentationDetents([.height(225), .medium, .large], selection: $settingsDetent)
+                    .presentationDragIndicator(.visible)
             }
             
         }
@@ -71,10 +47,7 @@ struct MapView: View {
             viewModel.getResources()
             viewModel.fetchCoordinates()
         }
-        
     }
-    
-    
 }
 
 

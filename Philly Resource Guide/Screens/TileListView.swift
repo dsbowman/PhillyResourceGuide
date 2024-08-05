@@ -16,19 +16,23 @@ struct TileListView: View {
             NavigationStack {
                 ScrollView {
                     LazyVGrid(columns: viewModel.columns, spacing: 40) {ForEach(viewModel.filteredResources.sorted(by: {$0.fields.label < $1.fields.label }), id: \.id) { apiData in
-                        NavigationLink(destination: DetailView(apiData: apiData.fields)) {
-                            largeTile(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
+//                        NavigationLink(destination: DetailView(apiData: apiData.fields)) {
+                        largeTile(label: apiData.fields.label , imageUrl: apiData.fields.logo?.first?.url ?? "", description: apiData.fields.descriptionNotes ?? "")
                                 .accentColor(.primary)
+                                .onTapGesture {
+                                    viewModel.selectedResource = apiData.fields
+                                    viewModel.isShowingDetail = true
+                                }
                         }
                         
-                    }
+//                    }
                     }
                     .listStyle(.plain)
                     .navigationTitle("Philly Resources")
                     .toolbar {
                         ToolbarItem {
                             Button {
-                                print("New Resource")
+                                viewModel.newResource = true
                             } label: {
                                 Image(systemName: "plus.circle.fill")
                                     .imageScale(.large)
@@ -59,6 +63,15 @@ struct TileListView: View {
                  dismissButton: alertItem.dismissButton)
             
         }
+        .sheet(isPresented: $viewModel.isShowingDetail) {
+            DetailView(apiData: viewModel.selectedResource ?? MockData.sampleResource)
+                .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: $viewModel.newResource) {
+            NewResource(newResource: $viewModel.newResource)
+                .presentationDragIndicator(.visible)
+        }
+        
     }
 }
 

@@ -92,7 +92,9 @@ enum FieldsType: String, Decodable {
     case program = "Program"
 }
 
-
+struct MockData {
+    static let sampleResource = Fields(descriptionNotes: "Mock Data for a mock detail", label: "Demo Mock Detail", hoursOfOperation: "Mon-Fri 9 - 5", phoneContact: "812-555-5555", emergencyAssistanceNumber: "756-555-5555", phoneContact2: "215-121-5555", street1: "1826 Moore Street", email: "demo@testemail.com", state: "PA", zip: "19145", city: "Philadelphia")
+}
 
 //// MARK: - Welcome
 //struct CommunityResourceModel: Decodable {
