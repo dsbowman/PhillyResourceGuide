@@ -117,62 +117,86 @@ struct DetailView: View {
                     ContactControl.website(url: url) }
             }
             
-            if let street1 = apiData.street1, let city = apiData.city, let state = apiData.state {
-                Section {
-                    HStack(alignment: .top) {
-                        ZStack {
-                            VStack(alignment: .leading, spacing: 0) {
-                                Map(position: $position) {
-                                    if let coordinate = apiData.locationCoordinate {
-                                        Annotation(apiData.label, coordinate: coordinate) {
-                                            Circle()
-                                                .fill(.blue)
-                                                .frame(width: 10, height: 10)
+            Section {
+                
+                if let street1 = apiData.street1, let city = apiData.city, let state = apiData.state {
+                    Section {
+                        HStack(alignment: .top) {
+                            ZStack {
+                                VStack(alignment: .leading, spacing: 0) {
+                                    Map(position: $position) {
+                                        if let coordinate = apiData.locationCoordinate {
+                                            Annotation(apiData.label, coordinate: coordinate) {
+                                                Circle()
+                                                    .fill(.blue)
+                                                    .frame(width: 10, height: 10)
+                                            }
                                         }
                                     }
-                                }
-                                .frame(height: 175)
-                                .onAppear {
-                                    if let coordinate = apiData.locationCoordinate {
-                                        position = MapCameraPosition.region(MKCoordinateRegion(
-                                            center: coordinate,
-                                            span: MKCoordinateSpan(latitudeDelta: 0.003125, longitudeDelta: 0.003125)
-                                        ))
+                                    .frame(height: 175)
+                                    .onAppear {
+                                        if let coordinate = apiData.locationCoordinate {
+                                            position = MapCameraPosition.region(MKCoordinateRegion(
+                                                center: coordinate,
+                                                span: MKCoordinateSpan(latitudeDelta: 0.003125, longitudeDelta: 0.003125)
+                                            ))
+                                        }
                                     }
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text("Location")
+                                            .font(.caption)
+                                        Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
+                                            HStack() {
+                                                Text(street1)
+                                                if let street2 = apiData.street2 {
+                                                    Text(street2)}
+                                                Text("\(city), \(state) \(apiData.zip ?? "")")
+                                                Spacer()
+                                            }
+                                            .font(.subheadline)
+                                            
+                                        })
+                                    }
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.white)
+                                    .frame(height: 35)
+                                    .padding(10)
+                                    
                                 }
+                                .background(.gray)
+                                .cornerRadius(20)
+                                .textSelection(.enabled)
+                                .shadow(radius: 10)
                                 
-                                VStack(alignment: .leading) {
-                                    Text("Location")
-                                        .font(.caption)
-                                    Link(destination: URL(string: "http://maps.apple.com/?address=\(street1),\(city),\(state)")!, label: {
-                                        HStack() {
-                                            Text(street1)
-                                            if let street2 = apiData.street2 {
-                                                Text(street2)}
-                                            Text("\(city), \(state) \(apiData.zip ?? "")")
-                                            Spacer()
-                                        }
-                                        .font(.subheadline)
-                                        
-                                    })
-                                }
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.white)
-                                .frame(height: 35)
-                                .padding(10)
                                 
                             }
-                            .background(.gray)
-                            .cornerRadius(20)
-                            .textSelection(.enabled)
-                            .shadow(radius: 20)
-                            
                             
                         }
-                        
+ 
                     }
+                    Button(action: {
+                        print("Yahtzee")
+                        viewModel.isShowingIssueForm = true
+                        
+                    }, label: {
+                        Text("Report an issue")
+                            .foregroundStyle(.blue)
+                            .frame(height: 25)
+
+                        
+                    })
                 }
             }
+            
+            Section {
+
+            }
+            .sheet(isPresented: $viewModel.isShowingIssueForm) {
+                IssueReport()
+                    .presentationDragIndicator(.visible)
+            }
+
         }
         .listStyle(.plain)
     }

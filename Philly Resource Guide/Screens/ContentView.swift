@@ -11,10 +11,10 @@ struct ContentView: View {
     var body: some View {
         TabView {
             TileListView()
-                .tabItem { Label("Tile View", systemImage: "rectangle") }
-            
-            ListView()
                 .tabItem { Label("List", systemImage: "list.bullet") }
+            
+//            ListView()
+//                .tabItem { Label("List", systemImage: "list.bullet") }
             
             MapView()
                 .tabItem { Label("Map", systemImage: "globe")}

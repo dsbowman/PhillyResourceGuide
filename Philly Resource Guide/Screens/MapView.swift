@@ -12,11 +12,12 @@ struct MapView: View {
     
     @StateObject private var viewModel = ListViewModel()
     @State private var settingsDetent = PresentationDetent.height(225)
+    @State private var position = MapCameraPosition.automatic
 
     
     var body: some View {
         VStack {
-            Map {
+            Map(position: $position) {
                 ForEach(viewModel.resources) { record in
                     if let coordinate = record.fields.locationCoordinate {
                         Annotation(record.fields.label, coordinate: coordinate) {

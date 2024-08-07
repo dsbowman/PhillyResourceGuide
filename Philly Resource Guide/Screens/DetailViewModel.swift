@@ -12,6 +12,8 @@ import CoreLocation
 
 class DetailViewModel: ObservableObject {
     
+    @Published var isShowingIssueForm = false
+    
 //    @Published var alertItem: AlertItem?
 //    @Published var isLoading = true
 //    @Published var searchText: String = ""
