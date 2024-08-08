@@ -5,6 +5,8 @@
 //  Created by Deke Bowman on 1/9/24.
 //
 
+
+import Foundation
 import UIKit
 
 final class NetworkManager {
@@ -75,63 +77,4 @@ final class NetworkManager {
         task.resume()
     }
 }
-    
-//    func getData() async throws -> [Record] {
-//            guard let url = URL(string: baseURL) else {
-//                throw APError.invalidURL
-//            }
-//        
-//        //            var request = URLRequest(url: url, timeoutInterval: Double.infinity)
-//        //            request.addValue(authorizationToken, forHTTPHeaderField: "Authorization")
-//        //            // Add other necessary headers if needed
-//        //
-//        //            request.httpMethod = "GET"
-//        
-//        let (data, _) = try await URLSession.shared.data(from: url)
-//        
-//        
-//        do {
-//            let decoder = JSONDecoder()
-//            return try decoder.decode(CommunityResourceModel.self, from: data).records
-//        } catch {
-//            throw APError.invalidURL
-//        }
-//
-////            var request = URLRequest(url: url, timeoutInterval: Double.infinity)
-////            request.addValue(authorizationToken, forHTTPHeaderField: "Authorization")
-//            // Add other necessary headers if needed
-//        }
-    
-    
-    
-//    func getData(completion: @escaping ([Record]) -> Void) {
-//            guard let url = URL(string: baseURL) else {
-//                print("Invalid URL")
-//                return
-//            }
-//
-//            var request = URLRequest(url: url, timeoutInterval: Double.infinity)
-//            request.addValue(authorizationToken, forHTTPHeaderField: "Authorization")
-//            // Add other necessary headers if needed
-//
-//            request.httpMethod = "GET"
-//
-//            let task = URLSession.shared.dataTask(with: request) { data, _, error in
-//                if let error = error {
-//                    print("Error fetching data: \(error)")
-//                    return
-//                }
-//
-//                if let data = data {
-////                    print(String(data: data, encoding: .utf8)!)
-//                    do {
-//                        let resourceData = try JSONDecoder().decode(CommunityResourceModel.self, from: data)
-//                        completion(resourceData.records)
-//                    } catch {
-//                        print("Error parsing JSON: \(error)")
-//                    }
-//                }
-//            }
-//            task.resume()
-//        }
 
