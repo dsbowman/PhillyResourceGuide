@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Community_Resource_GuideApp: App {
+struct Community_Resource_FinderApp: App {
     
     
     var body: some Scene {

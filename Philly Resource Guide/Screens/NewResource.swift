@@ -10,7 +10,7 @@ import SwiftUI
 struct NewResource: View {
     
     @StateObject var viewModel = NewResourceViewModel()
-    @Binding var newResource: Bool //I think this needs to be an environmental object
+    @Binding var newResource: Bool 
     
     var body: some View {
         NavigationStack {

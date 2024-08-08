@@ -15,7 +15,7 @@ import CoreLocation
     @Published var alertItem: AlertItem?
     @Published var isLoading = true
     @Published var searchText: String = ""
-    @Published var isShowingList = false
+    @Published var isShowingList = true
     @Published var isShowingDetail = false
     @Published var selectedResource: Fields?
     @Published var newResource = false

@@ -12,7 +12,8 @@ struct MapView: View {
     
     @StateObject private var viewModel = ListViewModel()
     @State private var settingsDetent = PresentationDetent.height(225)
-    @State private var position = MapCameraPosition.automatic
+    @State private var position = MapCameraPosition.userLocation(fallback: .automatic)
+    @StateObject private var locationServices = LocationService()
 
     
     var body: some View {
@@ -36,12 +37,24 @@ struct MapView: View {
                 }
 
             }
-            .searchable(text: $viewModel.searchText)
+            .accentColor(.teal)
+            .onAppear {
+                locationServices.checkIfLocationServicesIsEnabled()
+            }
             .sheet(isPresented: $viewModel.isShowingDetail) {
+                Spacer().frame(height: 50)
                 DetailView(apiData: viewModel.selectedResource ?? MockData.sampleResource)
                     .presentationDetents([.height(225), .medium, .large], selection: $settingsDetent)
                     .presentationDragIndicator(.visible)
+                    .presentationBackgroundInteraction(.enabled(upThrough: .large))
             }
+//            .sheet(isPresented: $viewModel.isShowingList) {
+//                TileListView()
+//                    .presentationDetents([.height(300), .medium, .large], selection: $settingsDetent)
+//                    .presentationDragIndicator(.visible)
+//                    .presentationBackgroundInteraction(.enabled(upThrough: .large))
+//                    .presentationContentInteraction(.scrolls)
+//            }
             
         }
         .task {

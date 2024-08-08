@@ -76,9 +76,9 @@ struct DetailView: View {
                 }
             }
         }
+        .padding(.bottom, 15)
         
         List {
-
             
             if let description = apiData.descriptionNotes {
                 Section {
@@ -175,25 +175,25 @@ struct DetailView: View {
                         }
  
                     }
-                    Button(action: {
-                        print("Yahtzee")
-                        viewModel.isShowingIssueForm = true
-                        
-                    }, label: {
-                        Text("Report an issue")
-                            .foregroundStyle(.blue)
-                            .frame(height: 25)
 
-                        
-                    })
                 }
             }
-            
-            Section {
 
-            }
+            Button(action: {
+                viewModel.isShowingIssueForm = true
+                print("Yahtzee")
+                
+                
+            }, label: {
+                Text("Report an issue")
+                    .foregroundStyle(.blue)
+                   
+
+                
+            })
+            
             .sheet(isPresented: $viewModel.isShowingIssueForm) {
-                IssueReport()
+                IssueReport(issue: $viewModel.isShowingIssueForm)
                     .presentationDragIndicator(.visible)
             }
 

@@ -10,6 +10,7 @@ import SwiftUI
 struct IssueReport: View {
     
     @StateObject private var viewModel = IssueReportViewModel()
+    @Binding var issue: Bool
     
     var body: some View {
         NavigationStack {
@@ -24,7 +25,7 @@ struct IssueReport: View {
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button(action: {
-                        print("Yahtzee")
+                        issue = false
                     }, label: {
                         Text("Submit")
                     })
@@ -36,5 +37,5 @@ struct IssueReport: View {
 }
 
 #Preview {
-    IssueReport()
+    IssueReport(issue: .constant(true))
 }
