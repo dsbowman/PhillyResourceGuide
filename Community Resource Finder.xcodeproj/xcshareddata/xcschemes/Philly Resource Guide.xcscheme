@@ -17,7 +17,7 @@
                BlueprintIdentifier = "E12BC5A32B4612C8000897E7"
                BuildableName = "Community Resource Guide.app"
                BlueprintName = "Community Resource Guide"
-               ReferencedContainer = "container:Philly Resource Guide.xcodeproj">
+               ReferencedContainer = "container:Community Resource Finder.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -46,7 +46,7 @@
             BlueprintIdentifier = "E12BC5A32B4612C8000897E7"
             BuildableName = "Community Resource Guide.app"
             BlueprintName = "Community Resource Guide"
-            ReferencedContainer = "container:Philly Resource Guide.xcodeproj">
+            ReferencedContainer = "container:Community Resource Finder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -70,7 +70,7 @@
             BlueprintIdentifier = "E12BC5A32B4612C8000897E7"
             BuildableName = "Community Resource Guide.app"
             BlueprintName = "Community Resource Guide"
-            ReferencedContainer = "container:Philly Resource Guide.xcodeproj">
+            ReferencedContainer = "container:Community Resource Finder.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
